@@ -3,6 +3,10 @@ body {
   font-size: 1em;
 }
 
+table {
+  vertical-align: middle;
+}
+
 h1 {
   font-size: 2em;
 }
