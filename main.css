@@ -3,13 +3,18 @@ body {
   font-size: 1em;
 }
 
+div.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 table {
-  align-self: center;
-  align-content: left;
+
 }
 
 h1 {
   font-size: 2em;
+  font-weight: bold;
 }
 
 h2 {
