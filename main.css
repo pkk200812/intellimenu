@@ -4,11 +4,12 @@ body {
 }
 
 table {
-  vertical-align: middle;
+  left:50%;
 }
 
 h1 {
   font-size: 2em;
+  left:50%;
 }
 
 h2 {
