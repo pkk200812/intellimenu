@@ -1,0 +1,2277 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <title>Intellimenu (Panera_Sandwiches_tweaked)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="fragment" content="!">
+	
+	<link rel="stylesheet" href="Panera_Sandwiches_tweaked_files/css/Panera_Sandwiches_tweaked.css">
+    <link rel="stylesheet" href="Panera_Sandwiches_tweaked_files/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	
+    <script src="Panera_Sandwiches_tweaked_files/js/Panera_Sandwiches_tweaked.js">
+    <script src="index.js"></script>
+  </head>
+
+  
+  <body>
+    <div class="title">
+      <h1>MENU</h1>
+	  <div class="speaker" id="speaker_menu"></div>
+    </div>
+	
+	<div>
+	  <audio class="player" id="menu_player">
+	    <source src="Panera_Sandwiches_tweaked_files/audio/horse.mp3" type="audio/mpeg">
+	    <source src="Panera_Sandwiches_tweaked_files/audio/horse.ogg" type="audio/ogg">
+		  Your browser does not support the audio element.
+	  </audio>	
+	</div>
+
+
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Roasted Turkey, Apple &amp; Cheddar Sandwich">
+          Roasted Turkey, Apple &amp; Cheddar Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $9.79
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                710
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="roasted-turkey-apple-slaw-&amp;-cheddar-sandwich-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(6)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Roasted Turkey, Apple &amp; Cheddar Sandwich
+        <!---->
+        <br>
+        $9.79
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;710
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781380" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781380" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Chipotle Chicken Avocado Melt">
+          Chipotle Chicken Avocado Melt
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $8.99
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                770
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="chipotle-chicken-avocado-melt-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(7)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Chipotle Chicken Avocado Melt
+        <!---->
+        <br>
+        $8.99
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;770
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781473" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781473" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Steak &amp; Arugula Sandwich">
+          Steak &amp; Arugula Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $9.59
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                500
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="steak-&amp;-arugula-sandwich-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(8)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Steak &amp; Arugula Sandwich
+        <!---->
+        <br>
+        $9.59
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;500
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781445" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781445" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Steak &amp; White Cheddar Panini">
+          Steak &amp; White Cheddar Panini
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $9.59
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                940
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="steak-&amp;-white-cheddar-hoagie-panini-tce-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(9)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Steak &amp; White Cheddar Panini
+        <!---->
+        <br>
+        $9.59
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;940
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781476" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781476" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Frontega Chicken Panini">
+          Frontega Chicken Panini
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $8.49
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                750
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="frontega-chicken-panini-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(10)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Frontega Chicken Panini
+        <!---->
+        <br>
+        $8.49
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;750
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust780995" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc780995" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="The Italian Sandwich">
+          The Italian Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $8.99
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                880
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="italian-salumi-sandwich-hoagie-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(11)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        The Italian Sandwich
+        <!---->
+        <br>
+        $8.99
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;880
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781487" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781487" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Bacon Turkey Bravo Sandwich">
+          Bacon Turkey Bravo Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $8.49
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                630
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="bacon-turkey-bravo-sandwich-tce-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(12)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Bacon Turkey Bravo Sandwich
+        <!---->
+        <br>
+        $8.49
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;630
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781490" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781490" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Napa Almond Chicken Salad Sandwich">
+          Napa Almond Chicken Salad Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $7.69
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                700
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="napa-almond-chicken-salad-sandwich-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(13)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Napa Almond Chicken Salad Sandwich
+        <!---->
+        <br>
+        $7.69
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;700
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust780987" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc780987" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Classic Grilled Cheese">
+          Classic Grilled Cheese
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.89
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                640
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="classic-grilled-cheese-sandwich-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(14)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Classic Grilled Cheese
+        <!---->
+        <br>
+        $6.89
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;640
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust780984" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc780984" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Mediterranean Veggie">
+          Mediterranean Veggie
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.89
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                440
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="mediterranean-veggie-on-thin-tomato-basil-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(15)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Mediterranean Veggie
+        <!---->
+        <br>
+        $6.89
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;440
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781483" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781483" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Turkey Sandwich">
+          Turkey Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.89
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                560
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="turkey-sandwich-tce-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(16)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Turkey Sandwich
+        <!---->
+        <br>
+        $6.89
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;560
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781479" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781479" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Tuna Salad Sandwich">
+          Tuna Salad Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.89
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                660
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="tuna-salad-sandwich-on-black-pepper-focaccia-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(17)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Tuna Salad Sandwich
+        <!---->
+        <br>
+        $6.89
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;660
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781516" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781516" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Ham &amp; Swiss Sandwich">
+          Ham &amp; Swiss Sandwich
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.89
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                730
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="ham-and-swiss-sandwich-tce-whole" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(18)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Ham &amp; Swiss Sandwich
+        <!---->
+        <br>
+        $6.89
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;730
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!----><div ng-if="$ctrl.i18nNames.length &gt; 1" class="dropup dropdown" uib-dropdown="">
+        <button type="button" ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="btn btn-sm uib-dropdown-toggle dropdown-toggle col-xs-5" title="Whole" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+          Whole
+          <span class="verticalDiv"></span>
+          <span class="caret"></span>
+        </button>
+        <ul ng-class="{&#39;col-xs-6&#39;: !$ctrl.options.isCustomizable, &#39;col-xs-5&#39;: $ctrl.options.isCustomizable}" class="uib-dropdown-menu dropdown-menu col-xs-5" role="menu" uib-dropdown-menu="">
+          <!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}" class="selected">
+            Whole
+          </li><!----><li ng-repeat="i18nName in $ctrl.i18nNames track by $index" ng-click="$ctrl.setSelectedOpt($index)" ng-class="{selected: i18nName === $ctrl.i18nNames[$ctrl.selectedOptIndex]}">
+            Half
+          </li><!---->
+        </ul>
+      </div><!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust781495" class="btn btn-sm btn-default col-xs-4">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-3" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc781495" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!---->
+      </div>
+    </div>
+  </div><!---->
+</section><!----><section class="row" ng-repeat="category in $ctrl.categories track by $index">
+  <!----><div ng-if="category.placards &amp;&amp; category.placards.length &gt; 0 ">
+    <div class="col-xs-12">
+      <!-- SUB-CATEGORY TITLE -->
+      <!----><h3 ng-if="category.i18nName">
+        Flatbreads
+      </h3><!---->
+    </div>
+    <div class="col-xs-12">
+      <div class="row">
+        <!-- SUB-CATEGORY PLACARD LOOP -->
+        <!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-xs-12 col-sm-12 col-md-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!---->
+
+<!-- REDIRECT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.redirect">
+  <redirect-placard redirect-placard="$ctrl.item"><div class="placard">
+  <!-- SWITCHING BETWEEN REDIRECT PLACARD TYPES -->
+  <div class="row">
+    <!----><div ng-if="$ctrl.redirectPlacard.redirect">
+      <!-- REDIRECT PLACARD TYPES -->
+      <!----><div ng-if="$ctrl.redirectPlacard.redirect.placardStyle === $ctrl.redirectTypes.flatbread">
+        <flatbread-placard placard="$ctrl.redirectPlacard"><!-- FLATBREAD -->
+<div class="row flatbread">
+  <img class="no-padding img-responsive" alt="Put two together to make the perfect flatbread pairing." ng-src="https://www.panerabread.com/foundation/panerabread/menu/delivery-categories/combo-categories-noncommerce/flatbread-combo-banner.jpg/jcr:content/renditions/original" src="./Order Panera Bread - Menu - Sandwiches_files/original(19)">
+  <div class="content flatbread-combo-banner">
+    <h3>Two is better than one.</h3>
+    <p>Put two together to make the perfect flatbread pairing.</p>
+    <button class="btn btn-primary" target="_blank" ng-click="$ctrl.redirect()">
+      Order Now
+    </button>
+  </div>
+</div></flatbread-placard>
+      </div><!---->
+      <!---->
+    </div><!---->
+  </div>
+</div>
+</redirect-placard>
+</div><!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="BBQ Chicken Flatbread">
+          BBQ Chicken Flatbread
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.19
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                380
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="bbq-chicken-flatbread-sandwich" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(20)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        BBQ Chicken Flatbread
+        <!---->
+        <br>
+        $6.19
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;380
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust5071" class="btn btn-sm btn-default col-xs-6">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-6" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc5071" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!----><div ng-repeat="placard in category.placards track by $index">
+          <placard class="col-md-4 col-sm-6 col-xs-12" combo-number="$ctrl.comboNumber" item="placard" is-rewards="$ctrl.isRewards" select-category="$ctrl.selectCategory({placard: placard})" customize-item="$ctrl.customizeItem({item: item})" order-item="$ctrl.orderItem({product: product, item: item})" is-item="$ctrl.isItem({placard: placard})" categorial-context="{parent: $ctrl.categoryData.i18nName, sub: category.i18nName}"><!-- CATEGORY -->
+<!---->
+
+<!-- PRODUCT -->
+<!----><div ng-if="$ctrl.placardType === $ctrl.placardTypes.item" class="row no-margin placard">
+  <item-placard options="{ isCustomizable: $ctrl.isCustomizable,
+                           customizeClick: $ctrl.customizeClick,
+                           isNotValidAssortment: $ctrl.isNotValidAssortment,
+                           item: $ctrl.item,
+                           selectedOpt: $ctrl.selected.opt,
+                           trigger: $ctrl.trigger,
+                           showOverlay: $ctrl.showOverlay,
+                           sodiumIconImgUrl: $ctrl.sodiumIconImgUrl,
+                           isSodiumMessageEnabled: $ctrl.isSodiumMessageEnabled,
+                           setSelectedOpt: $ctrl.setSelectedOpt,
+                           hasStockoutComponent: $ctrl.hasStockoutComponent,
+                           hasStockoutSide: $ctrl.hasStockoutSide,
+                           isOrderable: $ctrl.isOrderable,
+                           isSubmitDisabled: $ctrl.isSubmitDisabled,
+                           comboNumber: $ctrl.comboNumber,
+                           orderClick: $ctrl.orderClick,
+                           isProductStockout: $ctrl.isProductStockout}"><div class="col-xs-12">
+  <placard-ribbon options="{ isProductStockout: $ctrl.options.isProductStockout, item: $ctrl.item }"><!-- Stockout -->
+<!---->
+<!-- Item not Available -->
+<!----></placard-ribbon>
+  <div class="row placard-header hidden-xs">
+    <div class="col-sm-12 no-padding">
+      <div class="row no-margin">
+        <div class="title col-sm-8" title="Tomato Mozzarella Flatbread">
+          Tomato Mozzarella Flatbread
+          <!---->
+        </div>
+        <div class="col-sm-4 placard-details">
+          <div class="row">
+            <div class="col-sm-12 price">
+              $6.19
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 nutrition">
+                <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;nutr&#39;][0] &amp;&amp;
+                !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+                350
+                cal
+                </span><!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row placard-content">
+    <img alt="tomato-mozzarella-flatbread-sandwich" class="col-xs-3 col-sm-12 no-padding img-responsive" src="./Order Panera Bread - Menu - Sandwiches_files/original(21)">
+    <div class="col-xs-9 visible-xs mobile-placard-content">
+      <p>
+        Tomato Mozzarella Flatbread
+        <!---->
+        <br>
+        $6.19
+        <!----><span ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr &amp;&amp;
+          !$ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]">
+            |&nbsp;350
+            cal
+          </span><!---->
+      </p>
+    </div>
+    <div ng-show="$ctrl.options.showOverlay" class="addedOverlay animate-show ng-hide">
+      <i class="fa-check"></i>
+      <span>Added!</span>
+    </div>
+    <div class="popovers hidden-xs" ng-hide="$ctrl.options.showOverlay">
+      <div class="row no-margin">
+        <!----><div ng-if="$ctrl.item.i18nDesc" class="col-xs-6">
+          <a uib-popover-template="&#39;placardDescription.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-append-to-body="true" class="js-popover">
+            Description
+          </a>
+        </div><!---->
+        <!----><div ng-if="$ctrl.item.optSets[$ctrl.options.selectedOpt].nutr || $ctrl.item.optSets[$ctrl.options.selectedOpt][&#39;ignoreNutr&#39;]" ng-class="{&#39;col-xs-offset-6&#39;: !$ctrl.item.i18nDesc}" class="col-xs-6 text-right">
+          <a uib-popover-template="&#39;placardNutrition.html&#39;" popover-placement="bottom" popover-trigger="&#39;mouseenter&#39;" popover-popup-delay="0" popover-popup-close-delay="0" popover-append-to-body="true" class="js-popover">Nutrition
+          </a>
+        </div><!---->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <placard-buttons class="col-xs-12" options="{  isCustomizable: $ctrl.options.isCustomizable,
+                                 customizeClick: $ctrl.options.customizeClick,
+                                 isNotValidAssortment: $ctrl.options.isNotValidAssortment,
+                                 item: $ctrl.item,
+                                 trigger: $ctrl.options.trigger,
+                                 setSelectedOpt: $ctrl.options.setSelectedOpt,
+                                 hasStockoutComponent: $ctrl.options.hasStockoutComponent,
+                                 hasStockoutSide: $ctrl.options.hasStockoutSide,
+                                 isOrderable: $ctrl.options.isOrderable,
+                                 isSubmitDisabled: $ctrl.options.isSubmitDisabled,
+                                 comboNumber: $ctrl.options.comboNumber,
+                                 orderClick: $ctrl.options.orderClick}"><div class="row placard-footer">
+  <div class="col-xs-12 no-padding">
+    <div class="row no-margin">
+      <!---->
+      <button type="button" ng-click="$ctrl.options.customizeClick()" ng-class="{&#39;col-xs-6&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isNotValidAssortment,
+                  &#39;col-xs-4&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isNotValidAssortment ,
+                  &#39;col-xs-12&#39;: $ctrl.options.isNotValidAssortment,
+                  &#39;hidden&#39;: !$ctrl.options.isCustomizable}" id="cust5011" class="btn btn-sm btn-default col-xs-6">
+        Customize
+      </button>
+      <!----><div class="add-item col-xs-6" ng-if="!$ctrl.options.isNotValidAssortment" ng-class="{&#39;col-xs-12&#39;: $ctrl.i18nNames.length &lt;= 1 &amp;&amp; !$ctrl.options.isCustomizable,
+               &#39;col-xs-6&#39;: ($ctrl.i18nNames.length &lt;= 1 &amp;&amp; $ctrl.options.isCustomizable) || ($ctrl.i18nNames.length &gt; 1 &amp;&amp; !$ctrl.options.isCustomizable) ,
+               &#39;col-xs-3&#39;: $ctrl.i18nNames.length &gt; 1 &amp;&amp; $ctrl.options.isCustomizable}">
+        <!---->
+        <button type="button" ng-disabled="!$ctrl.options.isOrderable || $ctrl.options.isSubmitDisabled || $ctrl.options.item.hasInvalidSchedule" ng-switch="$ctrl.options.comboNumber === undefined" class="pull-right btn btn-sm btn-primary col-xs-12" id="plc5011" ng-click="$ctrl.options.orderClick()">
+          <!----><span ng-switch-when="true">Add Item</span><!---->
+          <!---->
+        </button>
+      </div><!---->
+    </div>
+  </div>
+</div>
+</placard-buttons>
+  </div>
+</div>
+</item-placard>
+</div><!---->
+
+<!-- REDIRECT -->
+<!---->
+
+<!-- CURATED -->
+<!---->
+</placard>
+        </div><!---->
+      </div>
+    </div>
+  </div><!---->
+</section><!----></parent-category>
+    </div><!---->
+    <!-- SUB CATEGORY / Checks to see if placards data exists, and checks to see if we are not viewing
+         a summary, as if we were looking at combos, and then also checks to see if we are not looking 
+         at a parent category, or if the user is currently searching the menu. This displays a single 
+         categoriy, with no sub-categories and their placards respectively. -->
+    <!---->
+    <!-- COMBO SUMMARY / Checks to see if viewSummary and hasSummary is defined or of
+         truthy value. Then shows essentially the end of the slow for the Combo flow. -->
+    <!---->
+    <!-- NO PLACARDS / Show's an error message if no placards are available. -->
+    <!---->
+  </div><!---->
+  <!-- LOADING / Shows text denoting that data is still loading for placards/categories. -->
+  <!---->
+</div>
+</menu-content><!---->
+    <!---->
+  </div>
+</div>
+</menu>
+</div>
+
+
+
+  </body>
+</html>
