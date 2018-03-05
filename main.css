@@ -1,27 +1,23 @@
 body {
   font-family: 'Roboto';
-  font-size: 1em;
+  font-size: 1sp;
 }
 
-div.center {
-  width: 100%;
-  margin: 0 auto;
+.title {
+  background: #8B0000;
+
 }
 
-table {
-
+.menu {
+  width = 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: black;
 }
 
 h1 {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-p {
-
+  font-size: 20sp;
+  color: white;
+  text-align: center;
 }
