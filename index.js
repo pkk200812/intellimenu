@@ -1,14 +1,8 @@
-document.getElementById('speaker1').onclick = function() {
-  clickEnglish1();
-}
+document.getElementById('speaker1').onclick = clickEnglish1();
 
-document.getElementById('speaker2').onclick = function() {
-  clickEnglish2();
-}
+document.getElementById('speaker1').onclick = clickEnglish2();
 
-document.getElementById('speaker3').onclick = function() {
-  clickEnglish3();
-}
+document.getElementById('speaker1').onclick = clickEnglish3();
 
 function clickEnglish1() {
   this.snd = new Audio('english1.mp3');
