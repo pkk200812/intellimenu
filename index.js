@@ -1,3 +1,4 @@
+/*
 function clickEnglish1() {
   var snd = new Audio('english1.mp3');
   snd.play();
@@ -15,3 +16,4 @@ function clickEnglish3() {
   snd.play();
   snd.currentTime = 0;
 }
+*/
