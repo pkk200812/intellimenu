@@ -2,43 +2,58 @@
 <html>
   <head>
     <title>Intellimenu</title>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
 
-    <link rel='stylesheet' href='main.css'>
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src='index.js'></script>
+    <script src="index.js"></script>
   </head>
   <body>
-    <div id='title'>
+    <div id="title">
       <h1>MENU</h1>
     </div>
-    <div class='menu'>
+    <div class="menu">
+      <div text-align="center" width="40%">
+        <fieldset>
+          <legend>Language</legend>
+          <input type="radio" name="language" value="english" />English
+          <input type="radio" name="language" value="spanish" />Spanish
+        </fieldset>
+      </div>
       <table>
         <tr>
-          <td class='name'>Grilled Cheese</td>
+          <td class="name">Grilled Cheese</td>
           <td>Sliced American cheese grilled on our classic white bread.</td>
           <td>Calories: 640</td>
-          <td><audio id="english1" src="english1.mp3" preload="auto"></audio><object id='speaker1' data='speaker_icon.svg' type='image/svg+xml' onclick="document.getElementById('english1').play();"></object></td>
+          <td><audio id="english1" src="english1.mp3" autostart="false"></audio><audio id="spanish1" src="spanish1.mp3" autostart="false"></audio><a id="speaker1"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('spanish1');"></a></td>
         </tr>
         <tr>
-          <td class='name'>Turkey Sandwich</td>
+          <td class="name">Turkey Sandwich</td>
           <td>Smoked turkey breast, lettuce, tomatoes, salt and pepper on Country Bread.</td>
           <td>Calories: 700</td>
-          <td><audio id="english2" src="english2.mp3" preload="auto"></audio><object id='speaker2' data='speaker_icon.svg' type='image/svg+xml' onclick="document.getElementById('english2').play();"></object></td>
+          <td><audio id="english2" src="english2.mp3" preload="auto" autostart="false"></audio><audio id="spanish2" src="spanish2.mp3" preload="auto" autostart="false"></audio><a id="speaker2"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english2');"></a></td>
         </tr>
         <tr>
-          <td class='name'>Ham & Swiss Sandwich</td>
+          <td class="name">Ham & Swiss Sandwich</td>
           <td>Smoked, lean ham, Swiss cheese, lettuce, tomatoes, salt and pepper.</td>
           <td>Calories: 730</td>
-          <td><audio id="english3" src="english3.mp3" preload="auto"></audio><object id='speaker3' data='speaker_icon.svg' type='image/svg+xml' onclick="document.getElementById('english3').play();"></object></td>
+          <td><audio id="english3" src="english3.mp3" autostart="false"></audio><audio id="spanish3" src="spanish3.mp3" autostart="false"></audio><a id="speaker3"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english3');"></a></td>
         </tr>
       </table>
     </div>
-    <div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <div id="google_translate_element"></div>
+<!--      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: "en"}, "google_translate_element");
+        }
+      </script>
+-->
+<!--      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+      <script>
+        function playSound(audioElement) {
+          var sound = document.getElementById(audioElement);
+          sound.play();
+        }
+      </script>
   </body>
 </html>
