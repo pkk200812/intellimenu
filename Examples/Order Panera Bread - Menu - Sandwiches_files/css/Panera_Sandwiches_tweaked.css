@@ -1,0 +1,28 @@
+/*   */
+
+#player {
+  height: 0;
+  width: 0body {
+  background-color: #000000;
+}
+
+
+}
+.speaker {
+  background-image: url(Panera_Sandwiches_tweaked_files/images/speaker_136x64.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  height: 64px;
+  width: 60px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  top: 150px;
+  left: 200px;
+  display: block;
+}
+
+.speakerplay {
+  background-position: 0 0;
+}
