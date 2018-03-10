@@ -1,4 +1,4 @@
-<!DOCTYPE HTML5>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Intellimenu</title>
@@ -19,6 +19,7 @@
           <input type="radio" name="language" value="english" checked="checked"/>English
           <input type="radio" name="language" value="spanish" />Spanish
           <input type="radio" name="language" value="french" />French
+          <input type="radio" name="language" value="german" />German
         </fieldset>
       </div>
       <table>
@@ -26,19 +27,37 @@
           <td class="name">Grilled Cheese</td>
           <td>Sliced American cheese grilled on our classic white bread.</td>
           <td>Calories: 640</td>
-          <td><audio id="english1" src="images/english1.mp3" autostart="false"></audio><audio id="spanish1" src="images/spanish1.mp3" autostart="false"></audio><audio id="french1" src="images/french1.mp3" autostart="false"></audio><a id="speaker1"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english1');"></a></td>
+          <td>
+            <audio id="english1" src="images/english1.mp3" autostart="false"></audio>
+            <audio id="spanish1" src="images/spanish1.mp3" autostart="false"></audio>
+            <audio id="french1" src="images/french1.mp3" autostart="false"></audio>
+            <audio id="german1" src="images/german1.mp3" autostart="false"></audio>
+            <a id="speaker1"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english1');"></a>
+          </td>
         </tr>
         <tr>
           <td class="name">Turkey Sandwich</td>
           <td>Smoked turkey breast, lettuce, tomatoes, salt and pepper on Country Bread.</td>
           <td>Calories: 700</td>
-          <td><audio id="english2" src="images/english2.mp3" preload="auto" autostart="false"></audio><audio id="spanish2" src="images/spanish2.mp3" preload="auto" autostart="false"></audio><audio id="french2" src="images/french2.mp3" autostart="false"></audio><a id="speaker2"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english2');"></a></td>
+          <td>
+            <audio id="english2" src="images/english2.mp3" preload="auto" autostart="false"></audio>
+            <audio id="spanish2" src="images/spanish2.mp3" preload="auto" autostart="false"></audio>
+            <audio id="french2" src="images/french2.mp3" autostart="false"></audio>
+            <audio id="german1" src="images/german1.mp3" autostart="false"></audio>
+            <a id="speaker2"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english2');"></a>
+          </td>
         </tr>
         <tr>
           <td class="name">Ham & Swiss Sandwich</td>
           <td>Smoked, lean ham, Swiss cheese, lettuce, tomatoes, salt and pepper.</td>
           <td>Calories: 730</td>
-          <td><audio id="english3" src="images/english3.mp3" autostart="false"></audio><audio id="spanish3" src="images/spanish3.mp3" autostart="false"></audio><audio id="french3" src="images/french3.mp3" autostart="false"></audio><a id="speaker3"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english3');"></a></td>
+          <td>
+            <audio id="english3" src="images/english3.mp3" autostart="false"></audio>
+            <audio id="spanish3" src="images/spanish3.mp3" autostart="false"></audio>
+            <audio id="french3" src="images/french3.mp3" autostart="false"></audio>
+            <audio id="german1" src="images/german1.mp3" autostart="false"></audio>
+            <a id="speaker3"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english3');"></a>
+          </td>
         </tr>
       </table>
     </div>
@@ -56,8 +75,15 @@
           if (document.querySelector('input[name="language"]:checked').checked) {
             if (document.querySelector('input[name="language"]:checked').value == "spanish")
               audioElement=audioElement.replace("english","spanish");
+
+            if (document.querySelector('input[name="language"]:checked').value == "spanish")
+              audioElement=audioElement.replace("english","spanish");
             if (document.querySelector('input[name="language"]:checked').value == "french")
               audioElement=audioElement.replace("english","french");
+
+              if (document.querySelector('input[name="language"]:checked').value == "german")
+                audioElement=audioElement.replace("english","german");
+
           }
 
           var sound = document.getElementById(audioElement);
