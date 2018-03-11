@@ -1,8 +1,11 @@
-<!DOCTYPE HTML5>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Intellimenu</title>
+    <title>Intellimenu - Menu 1</title>
     <meta charset="utf-8">
+
+    <meta name='description' content="Priti Kiefer's Intelligent Menu Idea">
+    <meta name='author' content='Rahul Kiefer'>
 
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -10,15 +13,16 @@
   </head>
   <body>
     <div id="title">
-      <h1>MENU</h1>
+      <h1>MENU 1</h1>
     </div>
     <div class="menu">
       <div align="center" text-align="center" style="margin: 0 auto; margin-left: 20%; margin-right: 20%">
-        <fieldset style="display: inline-block;>
+        <fieldset style="display: inline-block;">
           <legend align="center">Language: </legend>
           <input type="radio" name="language" value="english" checked="checked"/>English
           <input type="radio" name="language" value="spanish" />Spanish
           <input type="radio" name="language" value="french" />French
+          <input type="radio" name="language" value="german" />German
         </fieldset>
       </div>
       <table>
@@ -26,19 +30,46 @@
           <td class="name">Grilled Cheese</td>
           <td>Sliced American cheese grilled on our classic white bread.</td>
           <td>Calories: 640</td>
-          <td><audio id="english1" src="english1.mp3" autostart="false"></audio><audio id="spanish1" src="spanish1.mp3" autostart="false"></audio><audio id="french1" src="french1.mp3" autostart="false"></audio><a id="speaker1"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english1');"></a></td>
+          <td>
+            <audio id="english1" src="audio/english1.mp3" autostart="false"></audio>
+            <audio id="spanish1" src="audio/spanish1.mp3" autostart="false"></audio>
+            <audio id="french1" src="audio/french1.mp3" autostart="false"></audio>
+            <audio id="german1" src="audio/german1.mp3" autostart="false"></audio>
+            <a id="speaker1"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english1');"></a>
+          </td>
+        </tr>
+        <tr>
+          <td><img src='images/grilled_cheese.jpg'></td> //grilled cheese
         </tr>
         <tr>
           <td class="name">Turkey Sandwich</td>
           <td>Smoked turkey breast, lettuce, tomatoes, salt and pepper on Country Bread.</td>
           <td>Calories: 700</td>
-          <td><audio id="english2" src="english2.mp3" preload="auto" autostart="false"></audio><audio id="spanish2" src="spanish2.mp3" preload="auto" autostart="false"></audio><audio id="french2" src="french2.mp3" autostart="false"></audio><a id="speaker2"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english2');"></a></td>
+          <td>
+            <audio id="english2" src="audio/english2.mp3" preload="auto" autostart="false"></audio>
+            <audio id="spanish2" src="audio/spanish2.mp3" preload="auto" autostart="false"></audio>
+            <audio id="french2" src="audio/french2.mp3" autostart="false"></audio>
+            <audio id="german2" src="audio/german2.mp3" autostart="false"></audio>
+            <a id="speaker2"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english2');"></a>
+          </td>
+        </tr>
+        <tr>
+          <td><img src=''></td> //turkey sandwich
         </tr>
         <tr>
           <td class="name">Ham & Swiss Sandwich</td>
           <td>Smoked, lean ham, Swiss cheese, lettuce, tomatoes, salt and pepper.</td>
           <td>Calories: 730</td>
-          <td><audio id="english3" src="english3.mp3" autostart="false"></audio><audio id="spanish3" src="spanish3.mp3" autostart="false"></audio><audio id="french3" src="french3.mp3" autostart="false"></audio><a id="speaker3"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english3');"></a></td>
+          <td>
+            <audio id="english3" src="audio/english3.mp3" autostart="false"></audio>
+            <audio id="spanish3" src="audio/spanish3.mp3" autostart="false"></audio>
+            <audio id="french3" src="audio/french3.mp3" autostart="false"></audio>
+            <audio id="german3" src="audio/german3.mp3" autostart="false"></audio>
+            <a id="speaker3"><img src="speaker_icon.svg" type="image/svg+xml" onclick="playSound('english3');"></a>
+          </td>
+        </tr>
+        <tr>
+          <td><img src=''></td> //ham and swiss sandwich
         </tr>
       </table>
     </div>
@@ -56,8 +87,15 @@
           if (document.querySelector('input[name="language"]:checked').checked) {
             if (document.querySelector('input[name="language"]:checked').value == "spanish")
               audioElement=audioElement.replace("english","spanish");
+
+            if (document.querySelector('input[name="language"]:checked').value == "spanish")
+              audioElement=audioElement.replace("english","spanish");
             if (document.querySelector('input[name="language"]:checked').value == "french")
               audioElement=audioElement.replace("english","french");
+
+              if (document.querySelector('input[name="language"]:checked').value == "german")
+                audioElement=audioElement.replace("english","german");
+
           }
 
           var sound = document.getElementById(audioElement);
